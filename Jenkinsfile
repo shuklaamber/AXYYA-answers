@@ -1,7 +1,11 @@
+libraries{
+    lib('shared-lib')
+}
+
 pipeline {
 
   environment {
-    dockerimagename = "thetips4you/nodeapp"
+    dockerimagename = "app"
     dockerImage = ""
   }
 
@@ -18,7 +22,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build dockerimagename
+          dockerImage = docker.build app
         }
       }
     }
