@@ -1,6 +1,4 @@
-libraries{
-    lib('shared-lib')
-}
+@Library('shared-lib') _
 
 pipeline {
 
